@@ -7,7 +7,14 @@ import img1 from '../../images/pexels-pixabay-38554-removebg-preview.png';
 export default function UserList() {
     const columns = [
         { field: 'id', headerName: 'ID', width: 90},
-        { field: 'username', headerName: 'username', width: 200},
+        { field: 'user', headerName: 'user', width: 200, renderCell: (params) =>{
+            return (
+                <div className="userListUser">
+                    <img className="userListImg" src={params.row.avater} alt="" />
+                    {params.row.username}
+                </div>
+            )
+        }},
         { field: 'email', headerName: 'email', width: 200},
         {
             field: 'status',
