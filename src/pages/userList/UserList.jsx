@@ -7,13 +7,16 @@ import img1 from '../../images/pexels-pixabay-38554-removebg-preview.png';
 export default function UserList() {
     const columns = [
         { field: 'id', headerName: 'ID', width: 90},
-        { field: 'user', headerName: 'user', width: 200, renderCell: (params) =>{
+        { field: 'user', 
+        headerName: 'user', 
+        width: 200, 
+        renderCell: (params) => {
             return (
                 <div className="userListUser">
                     <img className="userListImg" src={params.row.avater} alt="" />
                     {params.row.username}
                 </div>
-            )
+            );
         }},
         { field: 'email', headerName: 'email', width: 200},
         {
@@ -26,6 +29,9 @@ export default function UserList() {
             headerName: 'Transction Volume',
             width: 160,
         },
+        {
+            
+        }
     ];
 
     const rows = [
@@ -33,7 +39,7 @@ export default function UserList() {
             id: 1, 
             username: 'John snow',
             email: 'johnsnow@gmail.com', 
-            avater : {img1},
+            avater : img1,
             status: 'active',
             transaction: '$120.00',
         },
@@ -41,7 +47,7 @@ export default function UserList() {
             id: 2, 
             username: 'John snow',
             email: 'johnsnow@gmail.com', 
-            avater : {img1},
+            avater : img1,
             status: 'active',
             transaction: '$120.00',
         },
@@ -49,7 +55,7 @@ export default function UserList() {
             id: 3, 
             username: 'John snow',
             email: 'johnsnow@gmail.com', 
-            avater : {img1},
+            avater : img1,
             status: 'active',
             transaction: '$120.00',
         },
@@ -57,7 +63,7 @@ export default function UserList() {
             id: 4, 
             username: 'John snow',
             email: 'johnsnow@gmail.com', 
-            avater : {img1},
+            avater : img1,
             status: 'active',
             transaction: '$120.00',
         },
@@ -65,7 +71,7 @@ export default function UserList() {
             id: 5, 
             username: 'John snow',
             email: 'johnsnow@gmail.com', 
-            avater : {img1},
+            avater : img1,
             status: 'active',
             transaction: '$120.00',
         },
@@ -73,7 +79,7 @@ export default function UserList() {
             id: 6, 
             username: 'John snow',
             email: 'johnsnow@gmail.com', 
-            avater : {img1},
+            avater : img1,
             status: 'active',
             transaction: '$120.00',
         },
@@ -81,7 +87,7 @@ export default function UserList() {
             id: 7, 
             username: 'John snow',
             email: 'johnsnow@gmail.com', 
-            avater : {img1},
+            avater : img1,
             status: 'active',
             transaction: '$120.00',
         },
@@ -89,7 +95,7 @@ export default function UserList() {
             id: 8, 
             username: 'John snow',
             email: 'johnsnow@gmail.com', 
-            avater : {img1},
+            avater : img1,
             status: 'active',
             transaction: '$120.00',
         },
@@ -97,7 +103,7 @@ export default function UserList() {
             id: 9, 
             username: 'John snow',
             email: 'johnsnow@gmail.com', 
-            avater : {img1},
+            avater : img1,
             status: 'active',
             transaction: '$120.00',
         },
@@ -105,7 +111,7 @@ export default function UserList() {
             id: 11, 
             username: 'John snow',
             email: 'johnsnow@gmail.com', 
-            avater : {img1},
+            avater : img1,
             status: 'active',
             transaction: '$120.00',
         },

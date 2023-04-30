@@ -3,7 +3,8 @@
 }
 
 .userListUser {
-    display: flex;align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .userListImg {
@@ -12,5 +13,4 @@
     border-radius: 50%;
     object-fit: cover;
     margin-right: 10px;
-
 }
