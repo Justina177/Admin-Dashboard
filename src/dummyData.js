@@ -1,3 +1,5 @@
+import img1 from './images/pexels-pixabay-38554-removebg-preview.png'
+
 export const userData = [
     {
         name: 'Jan',
@@ -48,3 +50,87 @@ export const userData = [
         "Active User": 9000,
     },
 ];
+
+
+export const userRows = [
+    {
+        id: 1, 
+        username: 'John snow',
+        email: 'johnsnow@gmail.com', 
+        avater : img1,
+        status: 'active',
+        transaction: '$120.00',
+    },
+    {
+        id: 2, 
+        username: 'John snow',
+        email: 'johnsnow@gmail.com', 
+        avater : img1,
+        status: 'active',
+        transaction: '$120.00',
+    },
+    {
+        id: 3, 
+        username: 'John snow',
+        email: 'johnsnow@gmail.com', 
+        avater : img1,
+        status: 'active',
+        transaction: '$120.00',
+    },
+    {
+        id: 4, 
+        username: 'John snow',
+        email: 'johnsnow@gmail.com', 
+        avater : img1,
+        status: 'active',
+        transaction: '$120.00',
+    },
+    {
+        id: 5, 
+        username: 'John snow',
+        email: 'johnsnow@gmail.com', 
+        avater : img1,
+        status: 'active',
+        transaction: '$120.00',
+    },
+    {
+        id: 6, 
+        username: 'John snow',
+        email: 'johnsnow@gmail.com', 
+        avater : img1,
+        status: 'active',
+        transaction: '$120.00',
+    },
+    {
+        id: 7, 
+        username: 'John snow',
+        email: 'johnsnow@gmail.com', 
+        avater : img1,
+        status: 'active',
+        transaction: '$120.00',
+    },
+    {
+        id: 8, 
+        username: 'John snow',
+        email: 'johnsnow@gmail.com', 
+        avater : img1,
+        status: 'active',
+        transaction: '$120.00',
+    },
+    {
+        id: 9, 
+        username: 'John snow',
+        email: 'johnsnow@gmail.com', 
+        avater : img1,
+        status: 'active',
+        transaction: '$120.00',
+    },
+    {
+        id: 11, 
+        username: 'John snow',
+        email: 'johnsnow@gmail.com', 
+        avater : img1,
+        status: 'active',
+        transaction: '$120.00',
+    },
+]

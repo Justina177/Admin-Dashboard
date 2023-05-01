@@ -2,8 +2,9 @@ import React from 'react';
 import './UserList.css';
 // import { DataDGrid } from '@mui/data-grid-material'
 import { DataGrid } from '@mui/x-data-grid';
-import img1 from '../../images/pexels-pixabay-38554-removebg-preview.png';
+// import img1 from '../../images/pexels-pixabay-38554-removebg-preview.png';
 import {DeleteOutlined} from "@mui/icons-material";
+import {userRows} from '../../dummyData';
 
 export default function UserList() {
     const columns = [
@@ -46,92 +47,10 @@ export default function UserList() {
         
     ];
 
-    const rows = [
-        {
-            id: 1, 
-            username: 'John snow',
-            email: 'johnsnow@gmail.com', 
-            avater : img1,
-            status: 'active',
-            transaction: '$120.00',
-        },
-        {
-            id: 2, 
-            username: 'John snow',
-            email: 'johnsnow@gmail.com', 
-            avater : img1,
-            status: 'active',
-            transaction: '$120.00',
-        },
-        {
-            id: 3, 
-            username: 'John snow',
-            email: 'johnsnow@gmail.com', 
-            avater : img1,
-            status: 'active',
-            transaction: '$120.00',
-        },
-        {
-            id: 4, 
-            username: 'John snow',
-            email: 'johnsnow@gmail.com', 
-            avater : img1,
-            status: 'active',
-            transaction: '$120.00',
-        },
-        {
-            id: 5, 
-            username: 'John snow',
-            email: 'johnsnow@gmail.com', 
-            avater : img1,
-            status: 'active',
-            transaction: '$120.00',
-        },
-        {
-            id: 6, 
-            username: 'John snow',
-            email: 'johnsnow@gmail.com', 
-            avater : img1,
-            status: 'active',
-            transaction: '$120.00',
-        },
-        {
-            id: 7, 
-            username: 'John snow',
-            email: 'johnsnow@gmail.com', 
-            avater : img1,
-            status: 'active',
-            transaction: '$120.00',
-        },
-        {
-            id: 8, 
-            username: 'John snow',
-            email: 'johnsnow@gmail.com', 
-            avater : img1,
-            status: 'active',
-            transaction: '$120.00',
-        },
-        {
-            id: 9, 
-            username: 'John snow',
-            email: 'johnsnow@gmail.com', 
-            avater : img1,
-            status: 'active',
-            transaction: '$120.00',
-        },
-        {
-            id: 11, 
-            username: 'John snow',
-            email: 'johnsnow@gmail.com', 
-            avater : img1,
-            status: 'active',
-            transaction: '$120.00',
-        },
-    ]
-
+    
   return (
     <div className="userList">
-        <DataGrid rows={rows} disableSelectionOnClick columns={columns} paginationModel={{ page: 0, pageSize: 10 }} checkboxSelection/>
+        <DataGrid rows={userRows} disableSelectionOnClick columns={columns} paginationModel={{ page: 0, pageSize: 10 }} checkboxSelection/>
 
   
     </div>    
