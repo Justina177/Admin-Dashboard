@@ -3,6 +3,7 @@ import './UserList.css';
 // import { DataDGrid } from '@mui/data-grid-material'
 import { DataGrid } from '@mui/x-data-grid';
 import img1 from '../../images/pexels-pixabay-38554-removebg-preview.png';
+import {DeleteOutlined} from "@mui/icons-material";
 
 export default function UserList() {
     const columns = [
@@ -30,8 +31,19 @@ export default function UserList() {
             width: 160,
         },
         {
-            
-        }
+            field: 'action',
+            headerName: 'Action',
+            width: 150,
+            renderCell: (params)=>{
+                return (
+                <>
+                    <button className="userListEdit">Edit</button>
+                    <DeleteOutlined className="userListDelete" />
+                </>
+                )
+            }
+        },
+        
     ];
 
     const rows = [
@@ -119,7 +131,7 @@ export default function UserList() {
 
   return (
     <div className="userList">
-        <DataGrid rows={rows} columns={columns} pageSize={5} checkboxSelection/>
+        <DataGrid rows={rows} disableSelectionOnClick columns={columns} paginationModel={{ page: 0, pageSize: 10 }} checkboxSelection/>
 
   
     </div>    
