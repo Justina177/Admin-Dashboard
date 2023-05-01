@@ -1,13 +1,18 @@
-import React from 'react';
+import { useState } from 'react';
 import './UserList.css';
-// import { DataDGrid } from '@mui/data-grid-material'
 import { DataGrid } from '@mui/x-data-grid';
-// import img1 from '../../images/pexels-pixabay-38554-removebg-preview.png';
 import {DeleteOutlined} from "@mui/icons-material";
 import {userRows} from '../../dummyData';
 import { Link } from 'react-router-dom';
 
+
 export default function UserList() {
+    const [data, setData] = useState(userRows);
+
+    const handleDelete = (id) => {
+        setData(data.filter(item=>item.id !== id))
+    }
+
     const columns = [
         { field: 'id', headerName: 'ID', width: 90},
         { field: 'user', 
@@ -42,7 +47,7 @@ export default function UserList() {
                     <Link to ={"/users/"+params.row.id} >
                         <button className="userListEdit">Edit</button>
                     </Link>
-                    <DeleteOutlined className="userListDelete" />
+                    <DeleteOutlined className="userListDelete" onClick={()=>handleDelete(params.row.id)} />
                 </>
                 )
             }
@@ -54,7 +59,7 @@ export default function UserList() {
   return (
     <div className="userList">
         <DataGrid 
-        rows={ userRows } 
+        rows={ data } 
         disableSelectionOnClick 
         columns={columns} 
         paginationModel={{ page: 0, pageSize: 10 }} 
