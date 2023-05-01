@@ -2,13 +2,17 @@ import React from 'react';
 import './User.css';
 import img1 from '../../images/pexels-pixabay-38554-removebg-preview.png';
 import { CalendarToday, LocationSearching, MailOutline, PermIdentity, PhoneAndroid, Publish } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 export default function user() {
   return (
     <div className="user">
         <div className="userTitleContainer">
             <h1 className="UserTitle">Edit User</h1>
+            <Link to="/newUser">
             <button className="userAddButton">Create</button>
+            </Link>
+            
         </div>
         <div className="userContainer">
         <div className="userShow">
