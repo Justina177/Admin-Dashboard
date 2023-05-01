@@ -1,7 +1,7 @@
 import React from 'react';
 import './User.css';
 import img1 from '../../images/pexels-pixabay-38554-removebg-preview.png';
-import { PermIdentity } from '@mui/icons-material';
+import { CalendarToday, LocationSearching, MailOutline, PermIdentity, PhoneAndroid } from '@mui/icons-material';
 
 export default function user() {
   return (
@@ -26,26 +26,27 @@ export default function user() {
                 <span className="userShowInfoTitle">HannahB123</span>
             </div>   
             <div className="userShowInfo">
-                <PermIdentity className="userShowIcon" />
+                <CalendarToday className="userShowIcon" />
                 <span className="userShowInfoTitle">10.12.1992</span>
-            </div>       
+            </div>  
 
+            <span className="userShowTitle">Contact Details</span>
             <div className="userShowInfo">
-                <PermIdentity className="userShowIcon" />
+                <PhoneAndroid className="userShowIcon" />
                 <span className="userShowInfoTitle">+234 1234 5678</span>
             </div>       
 
             <div className="userShowInfo">
-                <PermIdentity className="userShowIcon" />
+                <MailOutline className="userShowIcon" />
                 <span className="userShowInfoTitle">HannahB123@gmail.com</span>
             </div>       
 
             <div className="userShowInfo">
-                <PermIdentity className="userShowIcon" />
+                <LocationSearching className="userShowIcon" />
                 <span className="userShowInfoTitle">Abuja | Nigeria</span>
             </div>       
 
-            <div className="userShowInfo">
+            {/* <div className="userShowInfo">
                 <PermIdentity className="userShowIcon" />
                 <span className="userShowInfoTitle">HannahB123</span>
             </div>       
@@ -53,7 +54,7 @@ export default function user() {
             <div className="userShowInfo">
                 <PermIdentity className="userShowIcon" />
                 <span className="userShowInfoTitle">HannahB123</span>
-            </div>             
+            </div>              */}
         </div>
         </div>
         <div className="userUpdate"></div>
