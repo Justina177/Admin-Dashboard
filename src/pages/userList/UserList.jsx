@@ -5,6 +5,7 @@ import { DataGrid } from '@mui/x-data-grid';
 // import img1 from '../../images/pexels-pixabay-38554-removebg-preview.png';
 import {DeleteOutlined} from "@mui/icons-material";
 import {userRows} from '../../dummyData';
+import { Link } from 'react-router-dom';
 
 export default function UserList() {
     const columns = [
@@ -38,7 +39,9 @@ export default function UserList() {
             renderCell: (params)=>{
                 return (
                 <>
-                    <button className="userListEdit">Edit</button>
+                    <Link to ={"/users/"+params.row.id} >
+                        <button className="userListEdit">Edit</button>
+                    </Link>
                     <DeleteOutlined className="userListDelete" />
                 </>
                 )
@@ -50,7 +53,13 @@ export default function UserList() {
     
   return (
     <div className="userList">
-        <DataGrid rows={userRows} disableSelectionOnClick columns={columns} paginationModel={{ page: 0, pageSize: 10 }} checkboxSelection/>
+        <DataGrid 
+        rows={ userRows } 
+        disableSelectionOnClick 
+        columns={columns} 
+        paginationModel={{ page: 0, pageSize: 10 }} 
+        checkboxSelection
+        />
 
   
     </div>    
